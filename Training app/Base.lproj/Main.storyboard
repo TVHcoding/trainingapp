@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14269.14" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +12,61 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Training_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wat gaan we uitrekenen? " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yTi-c8-CQw">
+                                <rect key="frame" x="62" y="121" width="196" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sae-Z5-ZF7">
+                                <rect key="frame" x="110" y="269" width="100" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nfu-cA-ZBl">
+                                <rect key="frame" x="129" y="349" width="62" height="30"/>
+                                <state key="normal" title="Uitkomst"/>
+                                <connections>
+                                    <action selector="button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kff-sy-HXl"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FSC-xG-weT">
+                                <rect key="frame" x="110" y="191" width="100" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Nfu-cA-ZBl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1Sv-Ln-hPJ"/>
+                            <constraint firstItem="FSC-xG-weT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="110" id="5Ya-Ae-pxS"/>
+                            <constraint firstItem="yTi-c8-CQw" firstAttribute="centerX" secondItem="FSC-xG-weT" secondAttribute="centerX" id="Fbl-xw-bV1"/>
+                            <constraint firstItem="Sae-Z5-ZF7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="a8z-xw-rD1"/>
+                            <constraint firstItem="Nfu-cA-ZBl" firstAttribute="top" secondItem="Sae-Z5-ZF7" secondAttribute="bottom" constant="50" id="aln-Qc-GYo"/>
+                            <constraint firstItem="Sae-Z5-ZF7" firstAttribute="top" secondItem="FSC-xG-weT" secondAttribute="bottom" constant="48" id="lhw-Y1-pSR"/>
+                            <constraint firstItem="Sae-Z5-ZF7" firstAttribute="centerX" secondItem="Nfu-cA-ZBl" secondAttribute="centerX" id="qdy-fu-Yb5"/>
+                            <constraint firstItem="FSC-xG-weT" firstAttribute="leading" secondItem="Sae-Z5-ZF7" secondAttribute="leading" id="rz3-Qo-erj"/>
+                            <constraint firstItem="FSC-xG-weT" firstAttribute="trailing" secondItem="Sae-Z5-ZF7" secondAttribute="trailing" id="unq-PZ-3lN"/>
+                            <constraint firstItem="yTi-c8-CQw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="101" id="zgd-ZP-LvV"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="coollabel" destination="yTi-c8-CQw" id="KAJ-nI-muH"/>
+                        <outlet property="text1" destination="FSC-xG-weT" id="qfD-Ak-P4J"/>
+                        <outlet property="text2" destination="Sae-Z5-ZF7" id="iLH-Jj-qvA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="135" y="133.09859154929578"/>
         </scene>
     </scenes>
 </document>
