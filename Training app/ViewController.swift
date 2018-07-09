@@ -19,7 +19,13 @@ class ViewController: UIViewController {
     
     @IBAction func button(_ sender: Any) {
         
+        let addition = true
+        
+        if addition {
         coollabel.text = "Het antwoord is \(Double(text1.text!)! + Double(text2.text!)!)"
+        } else {
+            coollabel.text = "Het antwoord is \(Double(text1.text!)! - Double(text2.text!)!)"
+        }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
